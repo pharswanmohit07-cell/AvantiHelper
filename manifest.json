@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Avanti Question Helper",
+    "version": "2.0.0",
+    "description": "Read multiple-choice questions and request answer suggestions from Gemini.",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+            "http://*/*",
+            "https://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_title": "Avanti Question Helper",
+        "default_popup": "panel.html"
+    }
+}

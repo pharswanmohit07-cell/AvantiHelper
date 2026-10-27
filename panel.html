@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanti Question Helper</title>
+    <link rel="stylesheet" href="panel.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Avanti Question Helper</h1>
+
+        <div class="button-row">
+            <button id="loadQuestionBtn" type="button">Load question</button>
+            <button id="generateBtn" class="primary" type="button">Generate answer</button>
+        </div>
+
+        <section class="section" aria-labelledby="questionHeading">
+            <h2 id="questionHeading">Current question</h2>
+            <p id="questionText">No question detected yet.</p>
+        </section>
+
+        <section class="section" aria-labelledby="optionsHeading">
+            <h2 id="optionsHeading">Options</h2>
+            <ol id="optionsList"></ol>
+        </section>
+
+        <section class="section" aria-labelledby="answerHeading">
+            <h2 id="answerHeading">Gemini suggestion</h2>
+            <p id="answerResult">Waiting for an answer.</p>
+            <p id="selectionStatus" role="status" aria-live="polite">Status: not tracked</p>
+        </section>
+    </main>
+
+    <script src="panel.js"></script>
+</body>
+
+</html>
